@@ -6,5 +6,10 @@ RSpec.describe "Homes", type: :request do
       get root_path
       expect(response.status).to eq(200)
     end
+
+    it 'should render the correct template' do
+      get root_path
+      expect(response).to render_template('index')
+    end
   end
 end

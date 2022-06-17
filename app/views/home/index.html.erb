@@ -10,11 +10,11 @@
   <div class="w3-center">
     <div class="w3-card w3-container" style="min-height:460px">
 
-      <form>
-        <input type="text" class="w3-input" name="url" autofocus>
+      <%= form_with(:model => Address) do |f| %>
+        <%= f.text_field(:url, { required: true, class: 'w3-input', autofocus: true }) %>
         <br><br>
-        <a class="w3-button w3-theme">SHORT THAT URL!</a>
-      </form>
+        <%= f.submit('SHORT THAT URL!', { class: 'w3-button w3-theme' }) %>
+      <% end %>
 
     </div>
   </div>
