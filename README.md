@@ -7,5 +7,5 @@ to use/remember.
 
 The setups steps expect following tools to be installed on the system:
 
-* Ruby 2.6.3;
+* Ruby 3.1.2;
 * Rails 6.1.6;
