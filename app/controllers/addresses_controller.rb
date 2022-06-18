@@ -2,8 +2,12 @@ class AddressesController < ApplicationController
   def create
     @address = Address.new(address_params)
 
-    if @address.save
-      redirect_to root_path
+    respond_to do |format|
+      if @address.save
+        format.html { redirect_to root_path, notice: 'URL successfully shortened!' }
+        format.js
+        format.json { render json: @address, status: :created, location: @address }
+      end
     end
   end
 

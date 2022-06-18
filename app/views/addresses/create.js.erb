@@ -1,0 +1,7 @@
+var urls = window.document.getElementById("s_url_container");
+
+urls.style.visibility = "visible";
+
+<% shortened_url = "http://#{ request.host }/#{ @address.reload.url_shortened }" %>
+
+window.document.getElementById("s_url").value = "<%= shortened_url %>";
