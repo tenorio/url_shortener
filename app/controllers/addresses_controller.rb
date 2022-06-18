@@ -30,6 +30,7 @@ class AddressesController < ApplicationController
       url_rec = Address.find(url_id) rescue nil
 
       if url_rec
+        url_rec.increment!(:counter_hit, 1, touch: true)
         redirect_to "http://#{ url_rec.url }"
       else
         redirect_to root_path

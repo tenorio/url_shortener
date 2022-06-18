@@ -1,0 +1,5 @@
+<h1>Top 100 accessed URL's</h1>
+
+<% @urls.each do |url| %>
+  <div><%= url.url %> => <%= pluralize(url.counter_hit, 'hit') %></div>
+<% end %>
