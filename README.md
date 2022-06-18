@@ -9,3 +9,9 @@ The setups steps expect following tools to be installed on the system:
 
 * Ruby 3.1.2;
 * Rails 6.1.6;
+
+**Algorithm used**
+
+For this example, a [bijection function](https://en.wikipedia.org/wiki/Bijection) was used;
+
+
