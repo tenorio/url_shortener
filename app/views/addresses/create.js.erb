@@ -4,4 +4,9 @@ urls.style.visibility = "visible";
 
 <% shortened_url = "http://#{ request.host }/#{ @address.reload.url_shortened }" %>
 
+window.document.getElementById("s_orig_url").value = "<%= @address.url %>";
 window.document.getElementById("s_url").value = "<%= shortened_url %>";
+window.document.getElementById("s_url2").setAttribute('href', "<%= shortened_url %>");
+
+var clipboard = window.document.getElementById("s_url3");
+clipboard.dataset.clipboardCopy = "<%= shortened_url %>";

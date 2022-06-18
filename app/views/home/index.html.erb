@@ -14,10 +14,39 @@
         <br><br>
         <%= f.submit('SHRINK ME!', { class: 'w3-button w3-theme' }) %>
       <% end %>
+
       <br><br>
-      <div class="w3-card w3-container" id="s_url_container" style="visibility: hidden">
-        <div><input type="text" id="s_url" name="s_url" disabled></div>
+
+      <div class="w3-card-4" id="s_url_container" style="visibility: hidden">
+
+        <header class="w3-container w3-light-grey">
+          <h3>Your shortened URL &#x1F970;</h3>
+        </header>
+
+        <div class="w3-container">
+          <p>
+            Original URL was <input type="text" id="s_orig_url" name="s_orig_url" value="" disabled>
+          </p>
+          <hr>
+          <p>
+            Shortened URL is <input type="text" id="s_url" name="s_url" value="" disabled>
+          </p>
+        </div>
+
+        <div class="w3-container w3-light-grey">
+          <p>
+            <a href="" id="s_url2" target="_blank" style="padding-right: 50px">Test it in a new tab</a>
+            <a href="#" id="s_url3" data-clipboard-copy="">Copy it to your clipboard</a>
+          </p>
+        </div>
+
+        <div class="w3-container">
+          <p>
+            <%= link_to 'Click here to see the TOP 100 most accessed URL\'s', top100_path %>
+          </p>
+        </div>
       </div>
+      <br>
     </div>
   </div>
 </div>
