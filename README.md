@@ -1,7 +1,11 @@
 # URL Shortener
 
-This is a URL shortener app. You can enter your **BIG** URL and it will be shortened and became more elegant and ease 
-to use/remember.
+This is a URL shortener app. You can enter your **BIG URL** and it will be shortened and became more elegant and easy to use/remember.
+
+---
+##### LIVE VERSION available at [https://url-shortener-tenorio.herokuapp.com/](https://url-shortener-tenorio.herokuapp.com/)
+
+---
 
 **Prerequisites**
 
@@ -11,6 +15,7 @@ The setup steps expect the following tools to be installed on your system:
 * Ruby 3.1.2;
 * Rails 6.1.6;
 * PostgreSQL;
+
 
 ##### 1. Check out the repository
 ```bash

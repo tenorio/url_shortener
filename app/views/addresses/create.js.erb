@@ -10,3 +10,6 @@ window.document.getElementById("s_url2").setAttribute('href', "<%= shortened_url
 
 var clipboard = window.document.getElementById("s_url3");
 clipboard.dataset.clipboardCopy = "<%= shortened_url %>";
+
+window.document.getElementById("address_url").value = '';
+window.document.getElementById("address_url").focus();
