@@ -1,7 +1,24 @@
 <h1>Top 100 accessed URL's</h1>
 
-<% @urls.each do |url| %>
-  <div><%= url.url %> => <%= pluralize(url.counter_hit, 'hit') %></div>
+<% if @urls.present? %>
+  <div>
+    <table class="w3-table w3-striped w3-bordered">
+      <tr class="w3-teal">
+        <th>URL</th>
+        <th>URL title</th>
+        <th>Hits</th>
+        <% @urls.each do |url| %>
+          <tr>
+            <td><%= url.url %></td>
+            <td><%= url.title.present? ? url.title : 'N/A' %></td>
+            <td><%= pluralize(url.counter_hit, 'hit') %></td>
+          </tr>
+        <% end %>
+      </tr>
+    </table>
+  </div>
+<% else %>
+  <div>No data available yet.</div>
 <% end %>
 
 <br>
