@@ -1,4 +1,6 @@
 class HardJob
+  require 'open-uri'
+
   include Sidekiq::Job
 
   def perform(address_id)

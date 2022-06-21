@@ -2,7 +2,10 @@ var urls = window.document.getElementById("s_url_container");
 
 urls.style.visibility = "visible";
 
-<% shortened_url = "http://#{ request.host }/#{ @address.reload.url_shortened }" %>
+<%
+host = Rails.env == 'production' ? request.host : "#{request.host}:#{request.port}"
+shortened_url = "http://#{ host }/#{ @address.reload.url_shortened }"
+%>
 
 window.document.getElementById("s_orig_url").value = "<%= @address.url %>";
 window.document.getElementById("s_url").value = "<%= shortened_url %>";
